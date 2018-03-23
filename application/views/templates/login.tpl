@@ -7,7 +7,7 @@
 <body>
 
 <!-- <h2>Login Form</h2> -->
-<h2>{$login_}</h2>
+<h2>{$login_form}</h2>
 <form action="/action_page.php">
   <div class="imgcontainer">
     <img src="img_avatar2.png" alt="Avatar" class="avatar">
