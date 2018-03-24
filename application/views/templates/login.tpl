@@ -2,16 +2,16 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<link href="/css/style_sheet.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
 <!-- <h2>Login Form</h2> -->
 <h2>{$login_form}</h2>
-<form action="/action_page.php">
-  <div class="imgcontainer">
+<form action="/login.php">
+  <!-- <div class="imgcontainer">
     <img src="img_avatar2.png" alt="Avatar" class="avatar">
-  </div>
+  </div> -->
 
   <div class="container">
     <label for="uname"><b>Username</b></label>

@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Welcome extends RS_Controller {
 	function __construct(){
 		parent::__construct();
+		die("died in welcomde");
 	}
 
 	public function index() {
