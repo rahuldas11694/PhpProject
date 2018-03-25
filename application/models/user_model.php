@@ -25,14 +25,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		}
 
 		public function userAuthentication($get){
-
+			// var_dump($get);  die;
 			$count = $this->checkIfUserExist($get['email_id']);
 			if($count > 0){
-				$sql = "SELECT id FROM users WHERE email_id ? AND password = ?";
-				$result = $this->db->query($sql, array($get['email_id'],$get['pwd']));
+				$sql = "SELECT id FROM users WHERE email_id = ? AND password = ?";
+				$result = $this->db->query($sql, array($get['email_id'],$get['psw']));
 				$count = $this->db->affected_rows();
 				if($count > 0){
-					echo json_encode(array("Message"=>"Success","code"=>200));
+					echo json_encode(array("Message"=>"User Authenticated","code"=>200));
 				}
 				else{
 					echo json_encode(array("Message"=>"Wrong Email address or password","code"=>401));	

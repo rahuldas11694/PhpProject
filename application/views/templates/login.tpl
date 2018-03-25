@@ -8,19 +8,19 @@
 
 <!-- <h2>Login Form</h2> -->
 <h2>{$login_form}</h2>
-<form action="" action="get" id="login_form">
+<form id="login_form" method="post" action="">
   <!-- <div class="imgcontainer">
     <img src="img_avatar2.png" alt="Avatar" class="avatar">
   </div> -->
 
   <div class="container">
     <label for="email_id"><b>Username</b></label>
-    <input type="email" placeholder="Enter Email Id" name="email_id" id="email_id" required>
+    <input type="text" placeholder="Enter Email Id" name="email_id" id="email_id" required>
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" id="pwd" required>
         
-    <button type="submit">Login</button>
+    <input type="button" id="login_submit" value="LOGIN">Login</button>
     <!-- <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label> -->
@@ -32,5 +32,11 @@
   </div>
 </form>
 
+<script src="/js/project.js" type="text/javascript" charset="utf-8"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 </body>
+
 </html>
