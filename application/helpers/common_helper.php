@@ -1,8 +1,9 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-	public function print_pre($arr){
+	 function print_array($arr,$str='DATA->'){
+			echo "".$str."\n";
 			echo "<pre>";
-			print_r($array);
+			print_r($arr);
 			echo "</pre>";
 	}
 

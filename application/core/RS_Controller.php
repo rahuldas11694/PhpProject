@@ -6,16 +6,12 @@ class RS_Controller  extends CI_Controller {
 	public $data = array();
 	function __construct() {
 		parent::__construct();
-		// echo "RS_Controller\n"; 
 	}
 
 	public function index(){
-		echo "INSIDE THIS";
 	}
 
 }
-
-	// 
 
 class MY_fronendcontroller extends CI_Controller {
 	public $myfc = "this is  MY_fronendcontroller";
