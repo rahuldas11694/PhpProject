@@ -6,8 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			parent::__construct();
 			$this->load->helper("url");
 			$this->load->model('user_model','user');
-			$this->smarty->assign("template",'signup.tpl');
-			$this->smarty->view('index.tpl');
+			$this->smarty->view("login.tpl");
 
 		}
 
@@ -35,8 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		}
 
 		public function checkUser() {
-			// $uname = $this->input->get("uname");
-			// $pwd = $this->input->get('pwd');
-			$this->user->userAuthentication($this->input->get());
+
+			$this->user->userAuthentication($this->input->post());
 		}
 	}

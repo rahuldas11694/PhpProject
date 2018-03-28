@@ -1,45 +1,83 @@
-<?php /* Smarty version 2.6.31, created on 2018-03-25 03:22:14
+<?php /* Smarty version 2.6.31, created on 2018-03-28 13:55:04
          compiled from login.tpl */ ?>
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="/css/style_sheet.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-<!-- <h2>Login Form</h2> -->
-<h2><?php echo $this->_tpl_vars['login_form']; ?>
-</h2>
-<form id="login_form" method="post" action="">
-  <!-- <div class="imgcontainer">
-    <img src="img_avatar2.png" alt="Avatar" class="avatar">
-  </div> -->
+<!------ Include the above in your HEAD tag ---------->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+  </script>
+<link rel="stylesheet" type="text/css" href="/css/style_sheet.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
-  <div class="container">
-    <label for="email_id"><b>Username</b></label>
-    <input type="text" placeholder="Enter Email Id" name="email_id" id="email_id" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="pwd" required>
-        
-    <input type="button" id="login_submit" value="LOGIN">Login</button>
-    <!-- <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label> -->
+<div class="container">
+   <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-login">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-lg-12">
+              <form id="login-form" action="#" method="post" role="form" style="display: block;">
+                <h2>LOGIN</h2>
+                  <div class="form-group">
+                    <span class="err_msg">hii</span>
+                    <input type="text" name="email_id" id="email_id" tabindex="1" class="form-control" placeholder="Username" value="">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                  </div>
+                  <div class="col-xs-6 form-group pull-left checkbox">
+                    <input id="checkbox1" type="checkbox" name="remember">
+                    <label for="checkbox1">Remember Me</label>   
+                  </div>
+                  <div class="col-xs-6 form-group pull-right">     
+                        <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+                  </div>
+              </form>
+              <form id="register-form" action="#" method="post" role="form" style="display: none;">
+                <h2>REGISTER</h2>
+                  <div class="form-group">
+                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                  </div>
+                  <div class="form-group">
+                    <input type="email" name="email_id" id="email_id" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-sm-6 col-sm-offset-3">
+                        <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+                      </div>
+                    </div>
+                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-xs-6 tabs">
+              <a href="#" class="active" id="login-form-link"><div class="login">LOGIN</div></a>
+            </div>
+            <div class="col-xs-6 tabs">
+              <a href="/home/signup" id="register-form-link"><div class="register">REGISTER</div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-</form>
-
+</div>
+<footer>
+    <div class="container">
+        <div class="col-md-10 col-md-offset-1 text-center">
+            <h6 style="font-size:14px;font-weight:100;color: #fff;">Coded with <i class="fa fa-heart red" style="color: #BC0213;"></i> by <a href="http://hashif.com" style="color: #fff;" target="_blank">Hashif</a></h6>
+        </div>   
+    </div>
+</footer>
 <script src="/js/project.js" type="text/javascript" charset="utf-8"></script>
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-</body>
-
-</html>

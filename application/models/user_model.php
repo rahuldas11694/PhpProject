@@ -27,11 +27,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		public function userAuthentication($get){
 			// var_dump($get);  die;
 			$count = $this->checkIfUserExist($get['email_id']);
+
 			if($count > 0){
 				$sql = "SELECT id FROM users WHERE email_id = ? AND password = ?";
-				$result = $this->db->query($sql, array($get['email_id'],$get['psw']));
-				$count = $this->db->affected_rows();
-				if($count > 0){
+				$result = $this->db->query($sql, array($get['email_id'],$get['password']))->row_array();
+				// print_array($get);
+				// echo "\n".$sql."\n result "; print_array($result,count($result));
+				// $count = $this->db->row_array();
+				if(count($result) > 0){
 					echo json_encode(array("Message"=>"User Authenticated","code"=>200));
 				}
 				else{
@@ -41,5 +44,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			else {
 				echo json_encode(array("Message"=>"User does not exist. Please sign up first","code"=>404));
 			}
+			exit;
 		}
 	}
