@@ -1,4 +1,6 @@
-$(document).ready(function () {
+	console.log("HIIII");
+	window.log = console.log;
+
 	$("#login_submit").on("click",function(event){
 			// event.preventDefault();
 			log("YES in login")
@@ -7,9 +9,9 @@ $(document).ready(function () {
 			// 	log("DATA", data);
 			// })
 		})
-	console.log("HIIII");
-	window.log = console.log;
-	$("#sign_up").submit(function(event){
+
+	
+	$(".signupbtn").on('click',function(event){
 		event.preventDefault();
 
 		let postdata = $(this).serialize();
@@ -27,9 +29,5 @@ $(document).ready(function () {
 
 		});
 	});
-
-	
-
-	})
-});	
+	});
 

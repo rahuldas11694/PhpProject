@@ -1,5 +1,5 @@
 
-<form action="" id="sign_up" method="post" style="border:1px solid #ccc">
+<form action="" id="sign_up" method="POST" style="border:1px solid #ccc">
   <div class="container">
     <h1>Sign Up</h1>
     <p id="user_exists"></p>
@@ -21,15 +21,11 @@
     <label for="psw-repeat"><b>Repeat Password</b></label>
     <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
     
-    <!-- <label>
-      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-    </label> -->
-    
     <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
     <div class="clearfix">
       <button type="button" class="cancelbtn">Cancel</button>
-      <button type="submit" class="signupbtn">Sign Up</button>
+      <input type="submit" class="signupbtn">Sign Up</button>
     </div>
   </div>
 </form>
