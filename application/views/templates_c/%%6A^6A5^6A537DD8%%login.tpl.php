@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2018-03-28 13:55:04
+<?php /* Smarty version 2.6.31, created on 2018-03-29 15:28:39
          compiled from login.tpl */ ?>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -20,7 +20,7 @@
               <form id="login-form" action="#" method="post" role="form" style="display: block;">
                 <h2>LOGIN</h2>
                   <div class="form-group">
-                    <span class="err_msg">hii</span>
+                    <span class="res_msg"></span>
                     <input type="text" name="email_id" id="email_id" tabindex="1" class="form-control" placeholder="Username" value="">
                   </div>
                   <div class="form-group">

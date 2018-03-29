@@ -17,7 +17,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		}
 
 		public function checkIfUserExist($email){
-
 			$sql = "SELECT email_id FROM users where email_id=?";
 			$this->db->query($sql, array($email));
 			$count = $this->db->affected_rows();
@@ -25,25 +24,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		}
 
 		public function userAuthentication($get){
-			// var_dump($get);  die;
-			$count = $this->checkIfUserExist($get['email_id']);
+			$sql = "SELECT id, first_name, last_name, email_id, created_on FROM users WHERE email_id = ? AND password = ?";
+			$result = $this->db->query($sql, array($get['email_id'],$get['password']))->row_array();
+			return $result;
 
-			if($count > 0){
-				$sql = "SELECT id FROM users WHERE email_id = ? AND password = ?";
-				$result = $this->db->query($sql, array($get['email_id'],$get['password']))->row_array();
-				// print_array($get);
-				// echo "\n".$sql."\n result "; print_array($result,count($result));
-				// $count = $this->db->row_array();
-				if(count($result) > 0){
-					echo json_encode(array("Message"=>"User Authenticated","code"=>200));
-				}
-				else{
-					echo json_encode(array("Message"=>"Wrong Email address or password","code"=>401));	
-				}
-			}
-			else {
-				echo json_encode(array("Message"=>"User does not exist. Please sign up first","code"=>404));
-			}
-			exit;
+		}
+
+		public function getUserData($id){
+			$sql = "SELECT first_name, last_name, email_id, created_on FROM users WHERE id =?";
+			$result = $this->db->query($sql, array($id))->row_array();
+			return $result;
 		}
 	}

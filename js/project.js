@@ -54,14 +54,18 @@ $(function() {
 		e.preventDefault();
 		let getdata = $(this).serialize();
 		console.log("INSIDE LOGIN FORM", getdata)
-			$.get('home/checkUser',getdata,function(response){
-				var obj = $.parseJSON(response);
+			$.post('home/checkUser',getdata,function(response){
+				console.log("response-->",response);
+				var obj = JSON.parse(response);
+				console.log(obj);
 				// console.log("DATA",$.parseJSON(response),$.parseJSON(response.Message));
 				console.log(typeof response, typeof obj,obj.Message,obj.code) // response is in string convert that in object and access its values
 				if(obj.code == 404 || obj.code == 401){
-					$('.err_msg').text(obj.Message);// = obj.Message;
+					$('.res_msg').text(obj.Message);// = obj.Message;
 				}
 				else{
+					// $('._msg').text(obj.Message);
+					window.location.href = "/user/account";
 
 				}
 				

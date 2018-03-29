@@ -18,7 +18,7 @@
               <form id="login-form" action="#" method="post" role="form" style="display: block;">
                 <h2>LOGIN</h2>
                   <div class="form-group">
-                    <span class="err_msg">hii</span>
+                    <span class="res_msg"></span>
                     <input type="text" name="email_id" id="email_id" tabindex="1" class="form-control" placeholder="Username" value="">
                   </div>
                   <div class="form-group">
